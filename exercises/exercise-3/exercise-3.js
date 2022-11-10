@@ -6,3 +6,14 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+console.log("QTY     ITEM                   TOTAL");
+let result = 0;
+order.map(({itemName, quantity, unitPrice}) => {
+  let eachItem = quantity * unitPrice;
+  let items = `${quantity}     ${itemName}                  ${eachItem.toFixed(2)}`;
+  console.log(items);
+ result += eachItem;
+});
+
+console.log(" ");
+console.log(`Total: ${result}`);
